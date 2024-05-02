@@ -10,6 +10,7 @@ exports.SeedModule = void 0;
 const common_1 = require("@nestjs/common");
 const seed_services_1 = require("./seed.services");
 const seed_controller_1 = require("./seed.controller");
+const User_entity_1 = require("../entities/User.entity");
 const database_module_1 = require("../database/database.module");
 const User_provider_1 = require("../providers/User.provider");
 let SeedModule = class SeedModule {
@@ -17,7 +18,7 @@ let SeedModule = class SeedModule {
 exports.SeedModule = SeedModule;
 exports.SeedModule = SeedModule = __decorate([
     (0, common_1.Module)({
-        imports: [database_module_1.DatabaseModule],
+        imports: [database_module_1.DatabaseModule, User_entity_1.User],
         controllers: [seed_controller_1.SeedController],
         providers: [seed_services_1.SeedServices, ...User_provider_1.userProviders],
         exports: [seed_services_1.SeedServices],

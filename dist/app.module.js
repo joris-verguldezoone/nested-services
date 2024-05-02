@@ -11,15 +11,19 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const database_module_1 = require("./database/database.module");
-const seed_module_1 = require("./seeds/seed.module");
+const example_processor_1 = require("./example.processor");
+const bull_1 = require("@nestjs/bull");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [database_module_1.DatabaseModule, seed_module_1.SeedModule],
+        imports: [database_module_1.DatabaseModule,
+            bull_1.BullModule.registerQueue({
+                name: 'photo_queue',
+            }),],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, example_processor_1.ExampleJob],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
