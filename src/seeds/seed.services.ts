@@ -11,8 +11,8 @@ export class SeedServices {
   constructor(
     @Inject('USER_REPOSITORY')
     private readonly userRepository: Repository<User>,
-    private readonly articleRepository: Repository<Article>,
-    private readonly roleRepository: Repository<Role>
+    // private readonly articleRepository: Repository<Article>,
+    // private readonly roleRepository: Repository<Role>
 
   ) {}
   
@@ -34,30 +34,30 @@ export class SeedServices {
     console.log('Seed completed!');
   }
   
-  async createRandomArticles() {
-    for (let i = 0; i < 100; i++) {
-      const newUser = this.articleRepository.create({
-        // title
-        // description
-        // content
-        // image
-        // user_author
-        // category
-      });
-      await this.userRepository.save(newUser);
-    }
-    console.log('Seed completed!');
-  }
+  // async createRandomArticles() {
+  //   for (let i = 0; i < 100; i++) {
+  //     const newUser = this.articleRepository.create({
+  //       // title
+  //       // description
+  //       // content
+  //       // image
+  //       // user_author
+  //       // category
+  //     });
+  //     await this.userRepository.save(newUser);
+  //   }
+  //   console.log('Seed completed!');
+  // }
 
-  async createRoles(){
-    for (let i = 0; i < 100; i++) {
-      const newUser = this.roleRepository.create({
+  // async createRoles(){
+  //   for (let i = 0; i < 100; i++) {
+  //     const newUser = this.roleRepository.create({
       
-      });
-      await this.userRepository.save(newUser);
-  }
+  //     });
+  //     await this.userRepository.save(newUser);
+  // }
 
 }
 
 
-}
+// }

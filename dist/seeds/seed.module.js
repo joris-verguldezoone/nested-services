@@ -19,7 +19,7 @@ exports.SeedModule = SeedModule = __decorate([
     (0, common_1.Module)({
         imports: [database_module_1.DatabaseModule],
         controllers: [seed_controller_1.SeedController],
-        providers: [seed_services_1.SeedServices, ...User_provider_1.userProviders],
+        providers: [seed_services_1.SeedServices, ...User_provider_1.UserProviders],
         exports: [seed_services_1.SeedServices],
     })
 ], SeedModule);
