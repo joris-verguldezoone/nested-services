@@ -22,6 +22,9 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Branch service-worker
+Les images envoyées doivent s'appeler images dans le body de la requete, il faut intégrer le service multer il faut redis pour pouvoir lancer le server sur cette branche
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
